@@ -10,14 +10,14 @@ int main(void) {
     
    char nome[50];
    char end[50]; 
-   float pq,po,ha,ch,re,ce,scm,ag,xbu,xegg,xtudo,sdl,sdab,sdcaja,bauro,pastelfo,pastelca,esfirra,hamburguerfor,enrola,pastelfra; //cerveja,suco de marac˙ja,·gua com g·s
+   float pq,po,ha,ch,re,ce,scm,ag,xbu,xegg,xtudo,sdl,sdab,sdcaja,bauro,pastelfo,pastelca,esfirra,hamburguerfor,enrola,pastelfra; //cerveja,suco de marac√∫ja,√°gua com g√°s
    int op,op2,op3,senha,tel,perg,pay;
    pq=3.50;
    po=4.00;
    ha=5.00;
    ch=7.00;             
    re=3.00;
-   ce=5.00;                       //valores das peÁas
+   ce=5.00;                       //valores das pe√ßas
    scm=3.50;
    ag=2.00;
    xbu=5.50;
@@ -37,25 +37,25 @@ int main(void) {
    char p[50];
    float num,num2,calculo,c1,c2;  //variaveis para o calculo e para a quantidade de unidades
    
-   //codÌgo//
+   //cod√≠go//
    
    printf("\t\t\t\t\t==========Lanchonete kisabor========== \n\n\n");
    
-   printf("J· tem conta na kisabor? \n");
+   printf("J√° tem conta na kisabor? \n");
    printf("1. sim \n");
-   printf("2. n„o \n");
-   printf("Digite um n˙mero: ");
+   printf("2. n√£o \n");
+   printf("Digite um n√∫mero: ");
    scanf("%d", &perg);
    
-   if(perg==1){
-   
+   switch(perg){
+   case 1:   
    printf("\t\t\t\t\t\t\tLogin: ");
    scanf("%s", nome);
    printf("\t\t\t\t\t\t\tSenha: ");
    scanf("%d", &senha);
-}
+   break;
 
-  if(perg==2){
+   case 2:
 	printf("cadastramento. \n\n\n");
 	
 	printf("Digite Seu Nome: ");
@@ -64,12 +64,12 @@ int main(void) {
 	printf("Digite Uma Senha: ");
 	scanf("%d", &senha);
 	
-	printf("Digite Seu NumÈro de Telefone: ");
+	printf("Digite Seu Num√©ro de Telefone: ");
 	scanf("%d", &tel);
-	
+	break;
 }
  
- printf("Ol· %s, bem vindo a Lanchonete kisabor, selecione uma categoria: \n\n", nome);
+ printf("Ol√° %s, bem vindo a Lanchonete kisabor, selecione uma categoria: \n\n", nome);
    
    printf("1. Pedir estilo fast-foods \n");
    
@@ -83,9 +83,9 @@ int main(void) {
    scanf("%d", &op3);
    
 if(op3==1){               //primeiro desvio//
-   printf("1. P„o com queijo \n");
+   printf("1. P√£o com queijo \n");
    
-   printf("2. P„o com ovo \n");
+   printf("2. P√£o com ovo \n");
    
    printf("3. Hamburguer \n");
    
@@ -100,29 +100,29 @@ if(op3==1){               //primeiro desvio//
    printf("Escolha um hamburguer: ");
    scanf("%d", &op);
    
-   //inÌcio das opÁıes de Hamburguers
+   //in√≠cio das op√ß√µes de Hamburguers
    
     if(op==1){
-   	    op = ("p„o de queijo");
-       printf("Qual È a quantidade?:");
+   	    op = ("p√£o de queijo");
+       printf("Qual √© a quantidade?:");
        scanf("%f", &num);
        c1=pq*num;
     }
     if(op==2){
-   	   op = ("p„o com ovo");
-       printf("Quanl È a quantidade?:");
+   	   op = ("p√£o com ovo");
+       printf("Quanl √© a quantidade?:");
        scanf("%f", &num);
        c1=po*num;                               //condicional dos lanches
     }
     if(op==3){
    	   op = ("hamburguer"); 
-       printf("Qual È a quantidade?:");
+       printf("Qual √© a quantidade?:");
        scanf("%f", &num);
        c1=ha*num;
     }
     if(op==4){
    	   op = ("cheeseburguer"); 
-       printf("Qual È a quantidade?:");
+       printf("Qual √© a quantidade?:");
        scanf("%f", &num);
        c1=ch*num;
        
@@ -130,14 +130,14 @@ if(op3==1){               //primeiro desvio//
     
     if(op==5){
     	op = ("x-bacon");
-    	printf("Qual È a quantidade?: ");
+    	printf("Qual √© a quantidade?: ");
     	scanf("%f", &num);
     	c1=xbu*num;
 	}
 	
 	if(op==6){
 		op = ("x-egg burguer");
-		printf("Qual È a quantidade?: ");
+		printf("Qual √© a quantidade?: ");
 		scanf("%f", &num);
 		c1=xegg*num;
 	}
@@ -153,9 +153,9 @@ if(op3==1){               //primeiro desvio//
 	
 	printf("Deseja escolher Um Salgado?: ");
 	scanf("%s", p);
-		//fim das opÁıes de Hamburguer
+		//fim das op√ß√µes de Hamburguer
 
-       //inÌcio das opÁıes de bebidas
+       //in√≠cio das op√ß√µes de bebidas
      printf("\t Selecione uma bebida: \n");
    
      printf("\t 1. refrigerante \n");
@@ -164,13 +164,13 @@ if(op3==1){               //primeiro desvio//
      
      printf("\t 3. suco de maracuja \n");
      
-     printf("\t 4. ¡gua com g·s \n");
+     printf("\t 4. √Ågua com g√°s \n");
      
      printf("\t 5. Suco de Abacaxi \n");
      
-     printf("\t 6. Suco de Lim„o \n");
+     printf("\t 6. Suco de Lim√£o \n");
      
-     printf("\t 7. Suco de Caj· \n");
+     printf("\t 7. Suco de Caj√° \n");
      
      printf("\t Escolha uma Bebida: ");
      scanf("%d", &op2);
@@ -178,52 +178,52 @@ if(op3==1){               //primeiro desvio//
    
      if(op2==1){
    	   op2 = ("Refrigerantes"); 
-       printf("\t Qual È a quantidade?: ");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=re*num2;
      }
      if(op2==2){
    	   op2 = ("Cervejas"); 
-       printf("\t Qual È a quantidade?: ");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=ce*num2;
      }                                           //condicional das bebidas
      if(op2==3){
-   	   op2 = ("Sucos de marac˙ja");
-       printf("\t Qual È a quantidade?: ");
+   	   op2 = ("Sucos de marac√∫ja");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=scm*num2;
      }
      if(op2==4){
-   	   op2 = ("¡guas com g·s");
-       printf("\t Qual È a quantidade?: ");
+   	   op2 = ("√Åguas com g√°s");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=ag*num2;
      }
    
      if(op2==5){
    	   op2 = ("Sucos de Abacaxi");
-       printf("\t Qual È a quantidade?: ");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=sdab*num2;
      }
    
      if(op2==6){
-   	   op2 = ("Sucos de Lim„o");
-       printf("\t Qual È a quantidade?: ");
+   	   op2 = ("Sucos de Lim√£o");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=sdl*num2;
      }
    
      if(op2==7){
-   	   op2 = ("Sucos de Caj·");
-       printf("qual È a quantidade?: ");
+   	   op2 = ("Sucos de Caj√°");
+       printf("qual √© a quantidade?: ");
        scanf("%f", &num2);
        c2=sdcaja*num2;
      }
      
      printf("\t subtotal: %.2f \n", c2);
-   //fim da opÁıes de Sucos
+   //fim da op√ß√µes de Sucos
    
    
    calculo=c1+c2; //calculo do total do pedido
@@ -243,43 +243,43 @@ printf("%s", op2);
 
 printf(" O total do pedido ficou: R$ %.2f \n", calculo);
 
-printf("Digite o EndereÁo de Entrega: ");
+printf("Digite o Endere√ßo de Entrega: ");
 scanf("%s", end);
 
 printf("selecione uma forma de pagamento: \n");
 
-printf("1. DÈbito \n");
-printf("2. crÈdito \n");
+printf("1. D√©bito \n");
+printf("2. cr√©dito \n");
 printf("3. Pix \n");
 printf("4. dinheiro \n");
 scanf("%d", &pay);
 
 if(pay==1){
-    printf("cart„o de Debito. \nn");
+    printf("cart√£o de Debito. \nn");
     
-     printf("Digite o Numero do cart„o: ");
+     printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 ");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 ");
     
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
 }
 if(pay==2){
-    printf("cart„o de credito. \n\n");
+    printf("cart√£o de credito. \n\n");
     
-     printf("Digite o Numero do cart„o: ");
+     printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 ");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 ");
     
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
 }
 if(pay==3){
-    printf("¡rea pix. \n\n");
+    printf("√Årea pix. \n\n");
     
     printf("CNPJ:9090666171 \n");
     printf("Envie o comprovante para nosso whatsapp: 71985226776. \n"); 
@@ -287,15 +287,15 @@ if(pay==3){
 if(pay==4){
     printf("dinheiro");
     
-    printf("Pronto,avisamos ao motoboy que ser· em dinheiro.");
+    printf("Pronto,avisamos ao motoboy que ser√° em dinheiro.");
 }
    	
 }
 
 if(op3==2){ //segundo desvio//
-	  printf("1. P„o com queijo \n");
+	  printf("1. P√£o com queijo \n");
    
-   printf("2. P„o com ovo \n");
+   printf("2. P√£o com ovo \n");
    
    printf("3. Hamburguer \n");
    
@@ -310,29 +310,29 @@ if(op3==2){ //segundo desvio//
    printf("Escolha um hamburguer: ");
    scanf("%d", &op);
    
-   //inÌcio das opÁıes de Hamburguers
+   //in√≠cio das op√ß√µes de Hamburguers
    
     if(op==1){
-   	    op = ("p„os de queijo");
-       printf("Qual È a quantidade?:");
+   	    op = ("p√£os de queijo");
+       printf("Qual √© a quantidade?:");
        scanf("%d", &num);
        c1=pq*num;
     }
     if(op==2){
-   	   op = ("p„os com ovo");
-       printf("Qual È a quantidade?:");
+   	   op = ("p√£os com ovo");
+       printf("Qual √© a quantidade?:");
        scanf("%d", &num);
        c1=po*num;                               //condicional dos lanches
     }
     if(op==3){
    	   op = ("hamburguers"); 
-       printf("Qual È a quantidade?:");
+       printf("Qual √© a quantidade?:");
        scanf("%d", &num);
        c1=ha*num;
     }
     if(op==4){
    	   op = ("cheeseburguers"); 
-       printf("Qual È a quantidade?:");
+       printf("Qual √© a quantidade?:");
        scanf("%d", &num);
        c1=ch*num;
        
@@ -340,21 +340,21 @@ if(op3==2){ //segundo desvio//
     
     if(op==5){
     	op = ("x-bacons");
-    	printf("Qual È a quantidade?: ");
+    	printf("Qual √© a quantidade?: ");
     	scanf("%d", &num);
     	c1=xbu*num;
 	}
 	
 	if(op==6){
 		op = ("x-egg burguers");
-		printf("Qual È a quantidade?: ");
+		printf("Qual √© a quantidade?: ");
 		scanf("%d", &num);
 		c1=xegg*num;
 	}
 	
 	if(op==7){
 		op = ("X-tudos da casa");
-		printf("Qual È a quantidade?: ");
+		printf("Qual √© a quantidade?: ");
 		scanf("%d", &num);
 		c1=xtudo*num;
 	}
@@ -365,39 +365,39 @@ if(op3==2){ //segundo desvio//
     
     printf("%d %s o total ficou: %d \n",num,op,c1);
     
-   printf("Digite o EndereÁo de Entrega: ");
+   printf("Digite o Endere√ßo de Entrega: ");
    scanf("%s", end);
 
 printf("selecione uma forma de pagamento: \n");
 
-printf("1. DÈbito \n");
-printf("2. crÈdito \n");
+printf("1. D√©bito \n");
+printf("2. cr√©dito \n");
 printf("3. Pix \n");
 printf("4. dinheiro \n");
 scanf("%d", &pay);
 
 if(pay==1){
-    printf("cart„o de Debito. \n\n");
+    printf("cart√£o de Debito. \n\n");
 	 
-    printf("Digite o Numero do cart„o: ");
+    printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 \n");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 \n");
    
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
     
 }
 if(pay==2){
-    printf("cart„o de credito. \n\n");
+    printf("cart√£o de credito. \n\n");
     
-    printf("Digite o Numero do cart„o: ");
+    printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 ");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 ");
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
 }
 if(pay==3){
@@ -409,7 +409,7 @@ if(pay==3){
 if(pay==4){
     printf("dinheiro");
     
-    printf("Pronto,avisamos ao motoboy que ser· em dinheiro. \n");
+    printf("Pronto,avisamos ao motoboy que ser√° em dinheiro. \n");
    
 }
 }
@@ -436,48 +436,48 @@ if(op3==3){ //terceiro desvio
  if(op==1){
   	
   op = ("Bauros de quejo e presunto");	
-  printf("Qual È a quantidade: ");
+  printf("Qual √© a quantidade: ");
   scanf("%d", &num);
   c1 = num*bauro; 
  }
  
  if(op==2){
  	op = ("Pastel de Forno");
- 	printf("Qual È a quantidade?: ");
+ 	printf("Qual √© a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*pastelfo;
  }
  
  if(op==3){
  	op = ("Pastel de Carne");
- 	printf("Qual È a quantidade?: ");
+ 	printf("Qual √© a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*pastelca;
  }
  
  if(op==4){
  	op = ("Hamburguer de Forno");
- 	printf("Qual È a quantidade?: ");
+ 	printf("Qual √© a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*hamburguerfor;
  }
  if(op==5){
  	op = ("esfirra");
- 	printf("Qual È a quantidade?: ");
+ 	printf("Qual √© a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*esfirra;
 }
 
 if(op==6){
  	op = ("Pastel de Frango");
- 	printf("Qual È a quantidade?: ");
+ 	printf("Qual √© a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*pastelfra;
 }
 
 if(op==7){
  	op = ("Enroladinho de Salsicha");
- 	printf("Qual È a quantidade?: ");
+ 	printf("Qual √© a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*enrola;
  }
@@ -487,40 +487,40 @@ if(op==7){
     
     printf("%d %s o total ficou: %d \n",num,op,c1);
     
-   printf("Digite o EndereÁo de Entrega: ");
+   printf("Digite o Endere√ßo de Entrega: ");
    scanf("%s", end);
 
 printf("selecione uma forma de pagamento: \n");
 
-printf("1. DÈbito \n");
-printf("2. crÈdito \n");
+printf("1. D√©bito \n");
+printf("2. cr√©dito \n");
 printf("3. Pix \n");
 printf("4. dinheiro \n");
 scanf("%d", &pay);
 
 if(pay==1){
-    printf("cart„o de Debito. \n\n");
+    printf("cart√£o de Debito. \n\n");
 	 
-    printf("Digite o Numero do cart„o: ");
+    printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 \n");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 \n");
    
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
     
 }
 if(pay==2){
-    printf("cart„o de credito. \n\n");
+    printf("cart√£o de credito. \n\n");
     
-    printf("Digite o Numero do cart„o: ");
+    printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 ");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 ");
     scanf("%d", &num2);
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
 }
 if(pay==3){
@@ -532,15 +532,15 @@ if(pay==3){
 if(pay==4){
     printf("dinheiro");
     
-   printf("Pronto,avisamos ao motoboy que ser· em dinheiro.");
+   printf("Pronto,avisamos ao motoboy que ser√° em dinheiro.");
    
    printf("Precisa de troco?: \n");
    printf("1. Sim \n");
-   printf("2. N„o \n");
+   printf("2. N√£o \n");
    scanf("%d", &p);
    
    if(p==1){
-   	printf("Qual È o Valor a ser trocado?: ");
+   	printf("Qual √© o Valor a ser trocado?: ");
    	scanf("%s", p);
    }
    else if(op==2){
@@ -562,13 +562,13 @@ if(pay==4){
      
      printf("\t 3. suco de maracuja \n");
      
-     printf("\t 4. ¡gua com g·s \n");
+     printf("\t 4. √Ågua com g√°s \n");
      
      printf("\t 5. Suco de Abacaxi \n");
      
-     printf("\t 6. Suco de Lim„o \n");
+     printf("\t 6. Suco de Lim√£o \n");
      
-     printf("\t 7. Suco de Caj· \n");
+     printf("\t 7. Suco de Caj√° \n");
      
      printf("\t Escolha uma Bebida: ");
      scanf("%d", &op2);
@@ -576,25 +576,25 @@ if(pay==4){
    
      if(op2==1){
    	   op2 = ("Refrigerantes"); 
-       printf("\t Qual È a quantidade?: ");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%d", &num2);
        c2=re*num2;
      }
      if(op2==2){
    	   op2 = ("Cervejas"); 
-       printf("\t Qual È a quantidade?: ");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%d", &num2);
        c2=ce*num2;
      }                                           //condicional das bebidas
      if(op2==3){
-   	   op2 = ("Sucos de marac˙ja");
-       printf("\t Qual È a quantidade?: ");
+   	   op2 = ("Sucos de marac√∫ja");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%d", &num2);
        c2=scm*num2;
      }
      if(op2==4){
-   	   op2 = ("¡guas com g·s");
-       printf("\t Qual È a quantidade?: ");
+   	   op2 = ("√Åguas com g√°s");
+       printf("\t Qual √© a quantidade?: ");
        scanf("%d", &num2);
        c2=ag*num2;
      }
@@ -607,19 +607,19 @@ if(pay==4){
      }
    
      if(op2==6){
-   	   op2 = ("Sucos de Lim„o");
+   	   op2 = ("Sucos de Lim√£o");
        printf("\t Quantas unidades?: ");
        scanf("%d", &num2);
        c2=sdl*num2;
      }
    
      if(op2==7){
-   	   op2 = ("Sucos de Caj·");
+   	   op2 = ("Sucos de Caj√°");
        printf("quantas unidades?: ");
        scanf("%d", &num2);
        c2=sdcaja*num2;
      }
-   //fim da opÁıes de Sucos
+   //fim da op√ß√µes de Sucos
    
     printf("Detalhes Do Pedido: \n");
 
@@ -627,40 +627,40 @@ if(pay==4){
     
     printf("%d %s o total ficou: %d \n",num,op,c1);
     
-   printf("Digite o EndereÁo de Entrega: ");
+   printf("Digite o Endere√ßo de Entrega: ");
    scanf("%s", end);
 
 printf("selecione uma forma de pagamento: \n");
 
-printf("1. DÈbito \n");
-printf("2. crÈdito \n");
+printf("1. D√©bito \n");
+printf("2. cr√©dito \n");
 printf("3. Pix \n");
 printf("4. dinheiro \n");
 scanf("%d", &pay);
 
 if(pay==1){
-    printf("cart„o de Debito. \n\n");
+    printf("cart√£o de Debito. \n\n");
 	 
-    printf("Digite o Numero do cart„o: ");
+    printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 \n");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 \n");
    
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
     
 }
 if(pay==2){
-    printf("cart„o de credito. \n\n");
+    printf("cart√£o de credito. \n\n");
     
-    printf("Digite o Numero do cart„o: ");
+    printf("Digite o Numero do cart√£o: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cart„o: 30/04/2025 ");
+    printf("Digite a data de validade do cart√£o: 30/04/2025 ");
     scanf("%d", &num2);
     
-    printf("Digite o codÌgo cvc: ");
+    printf("Digite o cod√≠go cvc: ");
     scanf("%d", &op);
 }
 if(pay==3){
@@ -672,12 +672,12 @@ if(pay==3){
 if(pay==4){
     printf("dinheiro");
     
-   printf("Pronto,avisamos ao motoboy que ser· em dinheiro.");
+   printf("Pronto,avisamos ao motoboy que ser√° em dinheiro.");
  }
 
 }
 
-printf("pagamento em an·lise.");
+printf("pagamento em an√°lise.");
 
 return 0;
 
