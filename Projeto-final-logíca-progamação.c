@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <locale.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+//Projeto Final De Lógica de Programação
 
 int main(void) {
 	setlocale(LC_ALL, "Portuguese");
