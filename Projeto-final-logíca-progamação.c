@@ -101,54 +101,60 @@ if(op3==1){               //primeiro desvio//
    scanf("%d", &op);
    
    //início das opções de Hamburguers
-   
-    if(op==1){
+   switc(op){
+	
+	   case 1:
    	    op = ("pão de queijo");
        printf("Qual é a quantidade?:");
        scanf("%f", &num);
        c1=pq*num;
-    }
-    if(op==2){
+      break;
+    
+	   case 2:
    	   op = ("pão com ovo");
        printf("Quanl é a quantidade?:");
        scanf("%f", &num);
        c1=po*num;                               //condicional dos lanches
-    }
-    if(op==3){
+      break;
+    
+	   case 3:  
    	   op = ("hamburguer"); 
        printf("Qual é a quantidade?:");
        scanf("%f", &num);
        c1=ha*num;
-    }
-    if(op==4){
+      break;
+	 
+	   case 4:
+    
    	   op = ("cheeseburguer"); 
        printf("Qual é a quantidade?:");
        scanf("%f", &num);
        c1=ch*num;
        
-    }
+       break;
     
-    if(op==5){
+	   case 5:
     	op = ("x-bacon");
     	printf("Qual é a quantidade?: ");
     	scanf("%f", &num);
     	c1=xbu*num;
-	}
 	
-	if(op==6){
+	break;
+	   
+	   case 6:
 		op = ("x-egg burguer");
 		printf("Qual é a quantidade?: ");
 		scanf("%f", &num);
 		c1=xegg*num;
-	}
+	  break;
 	
-	if(op==7){
+	   case 7:
 		op = ("X-tudo da casa");
 		printf("Qual a quantidade?: ");
 		scanf("%f", &num);
 		c1=xtudo*num;
-	}
-	
+	  break;
+   }
 	printf("Subtotal: %.2f \n", c1);
 	
 	printf("Deseja escolher Um Salgado?: ");
@@ -175,53 +181,64 @@ if(op3==1){               //primeiro desvio//
      printf("\t Escolha uma Bebida: ");
      scanf("%d", &op2);
    
-   
-     if(op2==1){
+       switch(op2){
+       
+	       case 1:	       
    	   op2 = ("Refrigerantes"); 
        printf("\t Qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=re*num2;
-     }
-     if(op2==2){
+		       
+       break;
+		       
+	       case 2:
    	   op2 = ("Cervejas"); 
        printf("\t Qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=ce*num2;
-     }                                           //condicional das bebidas
-     if(op2==3){
+        
+	break;	       
+		       
+	       case 3:
    	   op2 = ("Sucos de maracúja");
        printf("\t Qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=scm*num2;
-     }
-     if(op2==4){
+		       
+	break;	       
+     
+	       case 4:
    	   op2 = ("Águas com gás");
        printf("\t Qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=ag*num2;
-     }
+     
+	break;	       
    
-     if(op2==5){
+	       case 5:
    	   op2 = ("Sucos de Abacaxi");
        printf("\t Qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=sdab*num2;
-     }
+     
+	break;	       
    
-     if(op2==6){
+	       case 6:
    	   op2 = ("Sucos de Limão");
        printf("\t Qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=sdl*num2;
-     }
-   
-     if(op2==7){
+     
+	break;
+		       
+	       case 7:  
    	   op2 = ("Sucos de Cajá");
        printf("qual é a quantidade?: ");
        scanf("%f", &num2);
        c2=sdcaja*num2;
-     }
      
+	break;  
+       }
      printf("\t subtotal: %.2f \n", c2);
    //fim da opções de Sucos
    
@@ -288,12 +305,13 @@ if(pay==4){
     printf("dinheiro");
     
     printf("Pronto,avisamos ao motoboy que será em dinheiro.");
+	
 }
    	
 }
 
 if(op3==2){ //segundo desvio//
-	  printf("1. Pão com queijo \n");
+  printf("1. Pão com queijo \n");
    
    printf("2. Pão com ovo \n");
    
@@ -312,53 +330,56 @@ if(op3==2){ //segundo desvio//
    
    //início das opções de Hamburguers
    
-    if(op==1){
+    switch(op){
+	    case 1:
    	    op = ("pãos de queijo");
        printf("Qual é a quantidade?:");
        scanf("%d", &num);
        c1=pq*num;
-    }
-    if(op==2){
+    break;
+		    
+	    case 2:
    	   op = ("pãos com ovo");
        printf("Qual é a quantidade?:");
        scanf("%d", &num);
        c1=po*num;                               //condicional dos lanches
-    }
-    if(op==3){
+    break;
+		    
+	    case 3:
    	   op = ("hamburguers"); 
        printf("Qual é a quantidade?:");
        scanf("%d", &num);
        c1=ha*num;
-    }
-    if(op==4){
+    break;
+    
+	    case 4:
    	   op = ("cheeseburguers"); 
        printf("Qual é a quantidade?:");
        scanf("%d", &num);
        c1=ch*num;
-       
-    }
+    break;
     
-    if(op==5){
+	    case 5:
     	op = ("x-bacons");
     	printf("Qual é a quantidade?: ");
     	scanf("%d", &num);
     	c1=xbu*num;
-	}
+	break;
 	
-	if(op==6){
-		op = ("x-egg burguers");
-		printf("Qual é a quantidade?: ");
-		scanf("%d", &num);
-		c1=xegg*num;
-	}
+	    case 6:
+	op = ("x-egg burguers");
+	printf("Qual é a quantidade?: ");
+	scanf("%d", &num);
+	c1=xegg*num;
+	 break;
 	
-	if(op==7){
-		op = ("X-tudos da casa");
-		printf("Qual é a quantidade?: ");
-		scanf("%d", &num);
-		c1=xtudo*num;
-	}
-	
+	    case 7:
+	op = ("X-tudos da casa");
+	printf("Qual é a quantidade?: ");
+	scanf("%d", &num);
+	c1=xtudo*num;
+	break;
+    }
     printf("Detalhes Do Pedido: \n");
 
     printf("Nome do cliente: %s \n", nome);
@@ -411,7 +432,19 @@ if(pay==4){
     
     printf("Pronto,avisamos ao motoboy que será em dinheiro. \n");
    
-}
+   printf("Precisa de troco?: \n");
+   printf("1. Sim \n");
+   printf("2. Não \n");
+   scanf("%d", &p);
+   
+   if(p==1){
+   	printf("Qual é o Valor a ser trocado?: ");
+   	scanf("%s", p);
+   }
+   else if(op==2){
+   	
+   	printf("Ok \n");
+   }
 }
 
 if(op3==3){ //terceiro desvio
@@ -433,54 +466,57 @@ if(op3==3){ //terceiro desvio
  printf("7. Enroladinho de Salsicha \n");	
  scanf("%d", &op);
  
- if(op==1){
+ switch(op){
   	
+	 case 1:
   op = ("Bauros de quejo e presunto");	
   printf("Qual é a quantidade: ");
   scanf("%d", &num);
   c1 = num*bauro; 
- }
+ break;
  
- if(op==2){
+	 case 2:
  	op = ("Pastel de Forno");
  	printf("Qual é a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*pastelfo;
- }
+        break;
  
- if(op==3){
+	 case 3:
  	op = ("Pastel de Carne");
  	printf("Qual é a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*pastelca;
- }
+      break;
  
- if(op==4){
+	 case 4:
  	op = ("Hamburguer de Forno");
  	printf("Qual é a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*hamburguerfor;
- }
- if(op==5){
+      break;
+ 
+	 case 5:
  	op = ("esfirra");
  	printf("Qual é a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*esfirra;
-}
+       break;
 
-if(op==6){
+	 case 6:
  	op = ("Pastel de Frango");
  	printf("Qual é a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*pastelfra;
-}
+      break;
 
-if(op==7){
+	 case 7:
  	op = ("Enroladinho de Salsicha");
  	printf("Qual é a quantidade?: ");
  	scanf("%d", &num);
  	c1 = num*enrola;
- }
+      break;
+		 
   printf("Detalhes Do Pedido: \n");
 
     printf("Nome do cliente: %s \n", nome);
@@ -574,51 +610,56 @@ if(pay==4){
      scanf("%d", &op2);
    
    
-     if(op2==1){
+     switch(op2){
+		     
+	     case 1:
    	   op2 = ("Refrigerantes"); 
        printf("\t Qual é a quantidade?: ");
        scanf("%d", &num2);
        c2=re*num2;
-     }
-     if(op2==2){
+     break;
+		     
+	     case 2:
    	   op2 = ("Cervejas"); 
        printf("\t Qual é a quantidade?: ");
        scanf("%d", &num2);
        c2=ce*num2;
-     }                                           //condicional das bebidas
-     if(op2==3){
+     break;
+		     //condicional das bebidas
+	     case 3:
    	   op2 = ("Sucos de maracúja");
        printf("\t Qual é a quantidade?: ");
        scanf("%d", &num2);
        c2=scm*num2;
-     }
-     if(op2==4){
+     break;
+		     
+	     case 4:
    	   op2 = ("Águas com gás");
        printf("\t Qual é a quantidade?: ");
        scanf("%d", &num2);
        c2=ag*num2;
-     }
+     break;
    
-     if(op2==5){
+	     case 5:
    	   op2 = ("Sucos de Abacaxi");
        printf("\t Quantas unidades?: ");
        scanf("%d", &num2);
        c2=sdab*num2;
-     }
+     break;
    
-     if(op2==6){
+	     case 6:
    	   op2 = ("Sucos de Limão");
        printf("\t Quantas unidades?: ");
        scanf("%d", &num2);
        c2=sdl*num2;
-     }
+     break;
    
-     if(op2==7){
+	     case 7:
    	   op2 = ("Sucos de Cajá");
        printf("quantas unidades?: ");
        scanf("%d", &num2);
        c2=sdcaja*num2;
-     }
+     break;
    //fim da opções de Sucos
    
     printf("Detalhes Do Pedido: \n");
@@ -673,11 +714,24 @@ if(pay==4){
     printf("dinheiro");
     
    printf("Pronto,avisamos ao motoboy que será em dinheiro.");
+   
+   printf("Precisa de troco?: \n");
+   printf("1. Sim \n");
+   printf("2. Não \n");
+   scanf("%d", &p);
+   
+   if(p==1){
+   	printf("Qual é o Valor a ser trocado?: ");
+   	scanf("%s", p);
+   }
+   else if(op==2){
+   	
+   	printf("Ok \n");
  }
 
 }
 
-printf("pagamento em análise.");
+printf("pagamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
 
 return 0;
 
