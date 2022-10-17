@@ -285,9 +285,23 @@ if(pay==3){
     printf("Envie o comprovante para nosso whatsapp: 71985226776. \n"); 
 }
 if(pay==4){
-    printf("dinheiro");
+    printf("dinheiro \n");
     
     printf("Pronto,avisamos ao motoboy que será em dinheiro.");
+    
+    printf("Precisa de troco?: \n");
+   printf("1. Sim \n");
+   printf("2. Não \n");
+   scanf("%d", &p);
+   
+   if(p==1){
+   	printf("Qual é o Valor a ser trocado?: ");
+   	scanf("%s", p);
+   }
+   else if(op==2){
+   	
+   	printf("Ok \n");
+   }
 }
    	
 }
@@ -410,6 +424,20 @@ if(pay==4){
     printf("dinheiro");
     
     printf("Pronto,avisamos ao motoboy que será em dinheiro. \n");
+    
+    printf("Precisa de troco?: \n");
+   printf("1. Sim \n");
+   printf("2. Não \n");
+   scanf("%d", &p);
+   
+   if(p==1){
+   	printf("Qual é o Valor a ser trocado?: ");
+   	scanf("%s", p);
+   }
+   else if(op==2){
+   	
+   	printf("Ok \n");
+   }
    
 }
 }
