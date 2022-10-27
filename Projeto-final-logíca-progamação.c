@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -12,12 +13,13 @@ int main(void) {
     
    char nome[50];
    char end[50]; 
-   float pq,po,ha,ch,re,ce,scm,ag,xbu,xegg,xtudo,sdl,sdab,sdcaja,bauro,pastelfo,pastelca,esfirra,hamburguerfor,enrola,pastelfra; //cerveja,suco de maracúja,água com gás
-   int op,op2,op3,senha,tel,perg,pay;
-   pq=3.50;
-   po=4.00;
-   ha=5.00;
-   ch=7.00;             
+   char email[50];
+   float pq,po,ha,ch,re,ce,scm,ag,xbu,xegg,xtudo,sdl,sdab,sdcaja,bauro,pastelfo,pastelca,esfirra,hamburguerfor,enrola,pastelfra; 
+   int op,op2,op3,opcao,senha,tel,perg,pay,p;
+   pq=2.50;
+   po=3.00;
+   ha=4.50;
+   ch=5.00;             
    re=3.00;
    ce=5.00;                       //valores das peças
    scm=3.50;
@@ -35,9 +37,7 @@ int main(void) {
    esfirra=3.50;
    pastelfra=2.50;
    enrola=2.00;
-   
-   char p[50];
-   float num,num2,calculo,c1,c2;  //variaveis para o calculo e para a quantidade de unidades
+   float num,num2,num3,calculo,c1,c2,c3;  //variaveis para o calculo e para a quantidade de unidades
    
    //codígo//
    
@@ -50,25 +50,35 @@ int main(void) {
    scanf("%d", &perg);
    
    if(perg==1){
-   
-   printf("\t\t\t\t\t\t\tLogin: ");
+   printf("\t\t\t\t\t\t\tKisabor\n\n");
+   printf("\t\t\t\t\t\t\tUsuario: ");
    scanf("%s", nome);
+   printf("\n");
    printf("\t\t\t\t\t\t\tSenha: ");
    scanf("%d", &senha);
    system(limpa_tela);
 }
 
   if(perg==2){
-	printf("cadastramento. \n\n\n");
+	printf("\t\t\t\t\t\t\tcadastramento. \n\n\n");
 	
-	printf("Digite Seu Nome: ");
+	printf("\t\t\t\t\t\t\tDigite Seu Nome: ");
 	scanf("%s", nome);
-	
-	printf("Digite Uma Senha: ");
+	printf("\n");
+	printf("\t\t\t\t\t\t\tDigite Seu melhor Email: ");
+	scanf("%s", email);
+	printf("\n");
+	printf("\t\t\t\t\t\t\tDigite Uma Senha: ");
 	scanf("%d", &senha);
-	
-	printf("Digite Seu Numéro de Telefone: ");
+	printf("\n");
+	printf("\t\t\t\t\t\t\tDigite Seu Numéro de Telefone: ");
 	scanf("%d", &tel);
+	printf("\n");
+	printf("\t\t\t\t\t\t\tDigite O Código enviado por sms para seu Número: ");
+	scanf("%d", &tel);
+	printf("\n");
+	printf("\t\t\t\t\t\t\tConta criada com sucesso!");
+	sleep(2);
 	system(limpa_tela);
 }
  
@@ -83,25 +93,30 @@ int main(void) {
    printf("4. Bebidas \n\n");
    
    printf("Escolha uma categoria: ");
-   scanf("%d", &op3);
+   scanf("%d", &opcao);
    
-if(op3==1){               //primeiro desvio//
-   printf("1. Pão com queijo \n");
+if(opcao==1){               //primeiro desvio//
+printf("=================================\n");
+
+   printf("Hamburguers\n\n");
    
-   printf("2. Pão com ovo \n");
+   printf("1. Pão com queijo: 2,50 \n\n");
    
-   printf("3. Hamburguer \n");
+   printf("2. Pão com ovo: 3,00 \n\n");
    
-   printf("4. Cheeseburger \n");
+   printf("3. Hamburguer: 5,00 \n\n");
    
-   printf("5. X-bacon \n");
+   printf("4. Cheeseburger: 3,00 \n\n");
    
-   printf("6. X-egg burguer \n");
+   printf("5. X-bacon: 5,50  \n\n");
    
-   printf("7. X-tudo da casa \n");
+   printf("6. X-egg burguer: 4,50 \n\n");
    
+   printf("7. X-tudo da casa: 7,50 \n\n");
+    printf("===============================\n");
    printf("Escolha uma opção: ");
    scanf("%d", &op);
+  
    
    //início das opções de Hamburguers
    
@@ -151,110 +166,200 @@ if(op3==1){               //primeiro desvio//
 		scanf("%f", &num);
 		c1=xtudo*num;
 	}
+	system(limpa_tela);
+	printf("Detalhes: %.f %s, Subtotal: %.2f \n\n", num,op,c1);
 	
-	printf("Subtotal: %.2f \n", c1);
 	
-	printf("Deseja escolher Um Salgado?: ");
-	scanf("%s", p);
-		//fim das opções de Hamburguer
+	printf("Deseja escolher Um Salgado?:\n "); //escolhas de salgados do primeiro desvio
+	printf("1. Sim\n");
+	printf("2. Não\n");
+	printf("Escolha uma opção: ");
+	scanf("%d", &p);
+		
+	if(p==1){
+printf("==============================\n");
+		printf("Salgados \n \n");
+ 
+ printf("1. Bauru de queijo e presunto \n\n");
+ 
+ printf("2. Pastel de Forno \n\n");
+ 
+ printf("3. Pastel de Carne \n\n");
+ 
+ printf("4. Hamburguer de Forno \n\n");
+ 
+ printf("5. Esfirra \n\n");
+ 
+ printf("6. Pastel de Frango \n\n");
+ 
+ printf("7. Enroladinho de Salsicha \n\n");
+printf("==============================\n");
+ printf("Selecione uma opção: ");	
+ scanf("%d", &op2);
+ 
+ if(op2==1){
+  	
+  op2 = ("Bauros de quejo e presunto");	
+  printf("Qual é a quantidade: ");
+  scanf("%f", &num2);
+  c2 = num2*bauro; 
+  	c2=c1+c2;
+ }
+ 
+ if(op2==2){
+ 	op2 = ("Pastel de Forno");
+ 	printf("Qual é a quantidade?: ");
+ 	scanf("%f", &num2);
+ 	c2 = num2*pastelfo;
+ 		c2=c1+c2;
+ }
+ 
+ if(op2==3){
+ 	op2 = ("Pastel de Carne");
+ 	printf("Qual é a quantidade?: ");
+ 	scanf("%f", &num2);
+ 	c2 = num2*pastelca;
+ 		c2=c1+c2;
+ }
+ 
+ if(op2==4){
+ 	op2 = ("Hamburguer de Forno");
+ 	printf("Qual é a quantidade?: ");
+ 	scanf("%f", &num2);
+ 	c2 = num2*hamburguerfor;
+ 		c2=c1+c2;
+ }
+ if(op2==5){
+ 	op2 = ("esfirra");
+ 	printf("Qual é a quantidade?: ");
+ 	scanf("%f", &num2);
+ 	c2 = num2*esfirra;
+ 		c2=c1+c2;
+}
+
+if(op2==6){
+ 	op2 = ("Pastel de Frango");
+ 	printf("Qual é a quantidade?: ");
+ 	scanf("%f", &num2);
+ 	c2 = num2*pastelfra;
+ 		c2=c1+c2;
+}
+
+if(op2==7){
+ 	op2 = ("Enroladinho de Salsicha");
+ 	printf("Qual é a quantidade?: ");
+ 	scanf("%f", &num2);
+ 	c2 = num2*enrola;
+ 	c2=c2+c1;
+ }
+ system(limpa_tela);
+ printf("Detalhes: %.f %s, Subtotal até agora: %.2f\n", num2,op,c2);
+ 
+	}	
+		
 
        //início das opções de bebidas
-     printf("\t Selecione uma bebida: \n");
+     printf("Selecione uma bebida: \n\n");
    
-     printf("\t 1. refrigerante \n");
+     printf("1. refrigerante \n\n");
      
-     printf("\t 2. cerveja \n");
+     printf("2. cerveja \n\n");
      
-     printf("\t 3. suco de maracuja \n");
+     printf("3. suco de maracuja \n\n");
      
-     printf("\t 4. Água com gás \n");
+     printf("4. Água com gás \n\n");
      
-     printf("\t 5. Suco de Abacaxi \n");
+     printf("5. Suco de Abacaxi \n\n");
      
-     printf("\t 6. Suco de Limão \n");
+     printf("6. Suco de Limão \n\n");
      
-     printf("\t 7. Suco de Cajá \n");
+     printf("7. Suco de Cajá \n\n");
      
-     printf("\t Escolha uma opção: ");
-     scanf("%d", &op2);
+     printf("Escolha uma opção: ");
+     scanf("%d", &op3);
    
    
-     if(op2==1){
-   	   op2 = ("Refrigerantes"); 
-       printf("\t Qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=re*num2;
+     if(op3==1){
+   	   op3 = ("Refrigerantes"); 
+       printf("Qual é a quantidade?: ");
+       scanf("%f", &num3);
+       c3=re*num3;
      }
-     if(op2==2){
-   	   op2 = ("Cervejas"); 
-       printf("\t Qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=ce*num2;
+     if(op3==2){
+   	   op3 = ("Cervejas"); 
+       printf("Qual é a quantidade?: ");
+       scanf("%f", &num3);
+       c3=ce*num3;
      }                                           //condicional das bebidas
-     if(op2==3){
-   	   op2 = ("Sucos de maracúja");
-       printf("\t Qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=scm*num2;
+     if(op3==3){
+   	   op3 = ("Sucos de maracúja");
+       printf("Qual é a quantidade?: ");
+       scanf("%f", &num3);
+       c3=scm*num3;
      }
-     if(op2==4){
-   	   op2 = ("Águas com gás");
-       printf("\t Qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=ag*num2;
-     }
-   
-     if(op2==5){
-   	   op2 = ("Sucos de Abacaxi");
-       printf("\t Qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=sdab*num2;
+     if(op3==4){
+   	   op3 = ("Águas com gás");
+       printf("Qual é a quantidade?: ");
+       scanf("%f", &num3);
+       c3=ag*num3;
      }
    
-     if(op2==6){
-   	   op2 = ("Sucos de Limão");
-       printf("\t Qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=sdl*num2;
+     if(op3==5){
+   	   op3 = ("Sucos de Abacaxi");
+       printf("Qual é a quantidade?: ");
+       scanf("%f", &num3);
+       c3=sdab*num3;
      }
    
-     if(op2==7){
-   	   op2 = ("Sucos de Cajá");
+     if(op3==6){
+   	   op3 = ("Sucos de Limão");
+       printf("Qual é a quantidade?: ");
+       scanf("%f", &num3);
+       c3=sdl*num3;
+     }
+   
+     if(op3==7){
+   	   op3 = ("Sucos de Cajá");
        printf("qual é a quantidade?: ");
-       scanf("%f", &num2);
-       c2=sdcaja*num2;
+       scanf("%f", &num3);
+       c3=sdcaja*num3;
      }
+      calculo=c1+c2+c3; //calculo do total do pedido
+      
+     system(limpa_tela);
      
-     printf("\t subtotal: %.2f \n", c2);
    //fim da opções de Sucos
    
    
-   calculo=c1+c2; //calculo do total do pedido
+  
 
 
 //detalhes do pedido
 
-printf("Detalhes Do Pedido: \n");
+printf("Detalhes Do Pedido: \n\n");
 
-printf("Nome do cliente: %s \n", nome);
+printf("Nome do cliente: %s \n\n", nome);
 
-printf("%.f", num);
-printf(" %s", op);
+printf("%.f %s", num,op);
+printf("\n\n");
 
-printf(" com %.f ", num2);
-printf("%s", op2);
+printf("%.f %s ", num2,op2);
+printf("\n\n");
 
-printf(" O total do pedido ficou: R$ %.2f \n", calculo);
+printf("%.f %s ", num3,op3);
+printf("\n\n");
+
+printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
 
 printf("Digite o Endereço de Entrega: ");
 scanf("%s", end);
 
 printf("selecione uma forma de pagamento: \n");
 
-printf("1. Débito \n");
-printf("2. crédito \n");
-printf("3. Pix \n");
-printf("4. dinheiro \n");
+printf("1. Débito \n\n");
+printf("2. crédito \n\n");
+printf("3. Pix \n\n");
+printf("4. dinheiro \n\n");
 scanf("%d", &pay);
 
 if(pay==1){
@@ -263,7 +368,7 @@ if(pay==1){
      printf("Digite o Numero do cartão: ");
     scanf("%d", &num);
     
-    printf("Digite a data de validade do cartão: 30/04/2025 ");
+    printf("Digite a data de validade do cartão: 30/04/2025 \n");
     
     
     printf("Digite o codígo cvc: ");
@@ -306,10 +411,10 @@ if(pay==4){
    	printf("Ok \n");
    }
 }
-   	
+
 }
 
-if(op3==2){ //segundo desvio//
+if(opcao==2){ //segundo desvio//
 	  printf("1. Pão com queijo \n");
    
    printf("2. Pão com ovo \n");
@@ -445,7 +550,7 @@ if(pay==4){
 }
 }
 
-if(op3==3){ //terceiro desvio
+if(opcao==3){ //terceiro desvio
 	
  printf("Salgados \n \n");
  
@@ -584,7 +689,7 @@ if(pay==4){
 }
 
 
- if(op3==4){   //ultimo desvio
+ if(opcao==4){   //ultimo desvio
  	printf("\t Selecione uma bebida: \n");
    
      printf("\t 1. refrigerante \n");
@@ -713,3 +818,18 @@ printf("pagamento em ánalise! assim que o pagamento for confirmado mandaremos u
 return 0;
 
 }
+/*Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+Projeto-Final-de-LP/Projeto-final-logíca-progamação.c at master · pontesdiego/Projeto-Final-de-LP*/
