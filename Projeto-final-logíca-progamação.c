@@ -825,7 +825,7 @@ printf("Nome do cliente: %s \n\n", nome);
 printf("%.f %s", num,op);
 printf("\n\n");
 
-printf("%.f %s ", num2,op2);
+printf("%.f %s ", num3,op3);
 printf("\n\n");
 
 printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
@@ -950,55 +950,6 @@ if(pay==4){
 		
 	} //fim do switch escolha
   
-   
-    printf("Detalhes Do Pedido: \n");
-
-    printf("Nome do cliente: %s \n", nome);
-    
-    printf("%d %s o total ficou: %d \n",num,op,c1);
-    
-   printf("Digite o Endereço de Entrega: ");
-   scanf("%s", end);
-
-printf("selecione uma forma de pagamento: \n");
-
-printf("1. Débito \n");
-printf("2. crédito \n");
-printf("3. Pix \n");
-printf("4. dinheiro \n");
-scanf("%d", &pay);
-
-if(pay==1){
-    printf("cartão de Debito. \n\n");
-	 
-    printf("Digite o Numero do cartão: ");
-    scanf("%d", &num);
-    
-    printf("Digite a data de validade do cartão: 30/04/2025 \n");
-   
-    
-    printf("Digite o codígo cvc: ");
-    scanf("%d", &op);
-    
-}
-if(pay==2){
-    printf("cartão de credito. \n\n");
-    
-    printf("Digite o Numero do cartão: ");
-    scanf("%d", &num);
-    
-    printf("Digite a data de validade do cartão: 30/04/2025 \n ");
-    scanf("%d", &num2);
-    
-    printf("Digite o codígo cvc: ");
-    scanf("%d", &op);
-}
-if(pay==3){
-    printf("Nosso pix. \n\n");
-    
-    printf("CNPJ:9090666171 \n");
-    printf("Envie o comprovante para nosso whatsapp: 71985226776.");    
-}
 
 }
 
