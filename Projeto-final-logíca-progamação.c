@@ -630,14 +630,9 @@ if(op2==7){
        scanf("%f", &num3);
        c3=sdcaja*num3;
      }
-      
-      
-     system(limpa_tela);
-	 
-	 //calculos
-	 
-	 //caso o usuario queira as três opções
-
+     	 //caso o usuario queira as três opções
+system(limpa_tela);
+if(p,eschamburguer,opbebidas==1){
 printf("Detalhes Do Pedido: \n\n");
 
 calculo=c1+c2+c3; //calculo do total do pedido
@@ -722,11 +717,11 @@ if(pay==4){
    	printf("Ok \n");
    }
 }
-break;
-	 	 
-	 switch(p){  //caso pessoa não queria escolher salgado
+}
+      	 switch(p){  //caso pessoa não queria escolher salgado
  
 case 2:
+	
 	calculo=c1+c3;
 	system(limpa_tela);
 	printf("Detalhes Do Pedido: \n\n");
@@ -814,10 +809,11 @@ break;
 }
 
 switch(opbebidas){ //caso a pessoa não queira bebida
+case 2:
 
 calculo=c1+c2;	
 system(limpa_tela);	
-case 2: 
+
 printf("Detalhes Do Pedido: \n\n");
 
 printf("Nome do cliente: %s \n\n", nome);
@@ -825,7 +821,7 @@ printf("Nome do cliente: %s \n\n", nome);
 printf("%.f %s", num,op);
 printf("\n\n");
 
-printf("%.f %s ", num3,op3);
+printf("%.f %s ", num2,op2);
 printf("\n\n");
 
 printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
@@ -900,11 +896,12 @@ if(pay==4){
    }
 }
 	break;
-		
+      
+     system(limpa_tela);
+	 
 	
 }
- 
-
+}
 	case 2: //refere-se ao switch(escolha)
 		
 	 printf("temos Lojas Espalhadas por toda Salvador: \n\n");
@@ -951,99 +948,18 @@ if(pay==4){
 	} //fim do switch escolha
   
 
-}
-
-
-//final siwtch escolha
-
-switch(p){      //caso pessoa não queria escolher salgado
- 
-case 2:
-	
-	printf("Detalhes Do Pedido: \n\n");
-
-printf("Nome do cliente: %s \n\n", nome);
-
-printf("%.f %s", num,op);
-printf("\n\n");
-
-printf("%.f %s ", num3,op3);
-printf("\n\n");
-
-printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
-
-printf("Digite o Endereço de Entrega: ");
-scanf("%s", end);
-
-printf("forma de pagamento: \n\n");
-
-printf("1. Débito \n\n");
-printf("2. crédito \n\n");
-printf("3. Pix \n\n");
-printf("4. dinheiro \n\n");
-printf("Escolha Uma Opção: ");
-scanf("%d", &pay);
-
-if(pay==1){
-    printf("cartão de Débito. \n\n");
-    
-     printf("Digite o Número do cartão: ");
-     scanf("%d", &num);
-    
-    printf("Digite a data de validade do cartão: 30/04/2025 \n");
-    
-    
-    printf("Digite o codígo cvc: ");
-    scanf("%d", &op);
-    
-    printf("agamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
-}
-if(pay==2){
-    printf("cartão de credito. \n\n");
-    
-     printf("Digite o Numero do cartão: ");
-    scanf("%d", &num);
-    
-    printf("Digite a data de validade do cartão: 30/04/2025 ");
-    
-    
-    printf("Digite o codígo cvc: ");
-    scanf("%d", &op);
-    
-    printf("agamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
-}
-if(pay==3){
-    printf("Área pix. \n\n");
-    
-    printf("CNPJ:9090666171 \n");
-    printf("Envie o comprovante para nosso whatsapp: 71985226776. \n"); 
-}
-if(pay==4){
-    printf("dinheiro \n");
-    
-    printf("Pronto,avisamos ao motoboy que será em dinheiro.");
-    
-    printf("Precisa de troco?: \n");
-   printf("1. Sim \n");
-   printf("2. Não \n");
-   scanf("%d", &p);
-   
-   if(p==1){
-   	printf("Qual é o Valor a ser trocado?: ");
-   	scanf("%s", p);
-   }
-   else if(op==2){
-   	
-   	printf("Ok \n");
-   }
-}
-break;
 
 
 
-}
+
+
+
+
 return 0;
+
 }
+
+
 /*Footer
 © 2022 GitHub, Inc.
 Footer navigation
