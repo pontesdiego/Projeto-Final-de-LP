@@ -559,6 +559,7 @@ if(op2==7){
 	printf("\n");
 	printf("Carregando....");
 	sleep(2);
+	system(limpa_tela);
 	
 	if(opbebidas==1){
 		
@@ -657,6 +658,9 @@ printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
 printf("Digite o Endereço de Entrega: ");
 scanf("%s", end);
 
+system(limpa_tela);
+printf("Endereço de entrega: %s", end);
+printf("\n");
 printf("forma de pagamento: \n\n");
 
 printf("1. Débito \n\n");
@@ -741,7 +745,8 @@ printf("Digite o Endereço de Entrega: ");
 scanf("%s", end);
 
 system(limpa_tela);
-printf("%s", end);
+printf("Endereço de entrega: %s", end);
+printf("\n");
 
 printf("forma de pagamento: \n\n");
 
@@ -829,7 +834,7 @@ printf("Digite o Endereço de Entrega: ");
 scanf("%s", end);
 
 system(limpa_tela);
-printf("%s", end);
+printf("Endereço de entrega: %s", end);
 printf("\n");
 
 printf("forma de pagamento: \n\n");
