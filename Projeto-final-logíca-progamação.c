@@ -452,11 +452,13 @@ if(pay==4){
 	break;
 }
 
-} //fim do switch de hamburguer
+} //fim do switch caso a pessoa não queira hamburguer
 
 
-//caso o usuario esolha sim, após ele pedir o hamburguer, ele ira pra essa opção:
+//caso o usuario  esolha sim, após ele pedir o hamburguer, ele ira pra essa opção:
 
+switch(eschamburguer){
+	case 1:
 	printf("Deseja escolher Um Salgado?:\n "); 
 	printf("1. Sim\n\n");
 	printf("2. Não\n\n");
@@ -630,9 +632,13 @@ if(op2==7){
        scanf("%f", &num3);
        c3=sdcaja*num3;
      }
+
+ }
      	 //caso o usuario queira as três opções
 system(limpa_tela);
+
 if(p,eschamburguer,opbebidas==1){
+	
 printf("Detalhes Do Pedido: \n\n");
 
 calculo=c1+c2+c3; //calculo do total do pedido
@@ -717,13 +723,17 @@ if(pay==4){
    	printf("Ok \n");
    }
 }
+break;
 }
-      	 switch(p){  //caso pessoa não queria escolher salgado
- 
+
+switch(p){ //caso a pessoa não queira salgado
+  
 case 2:
-	
 	calculo=c1+c3;
+	
 	system(limpa_tela);
+	
+	
 	printf("Detalhes Do Pedido: \n\n");
 
 printf("Nome do cliente: %s \n\n", nome);
@@ -901,7 +911,7 @@ if(pay==4){
 	 
 	
 }
-}
+}switch(escolha){
 	case 2: //refere-se ao switch(escolha)
 		
 	 printf("temos Lojas Espalhadas por toda Salvador: \n\n");
@@ -941,10 +951,6 @@ if(pay==4){
 	
 	break;
 		
-	default:
-	printf("opção incorreta");
-     
-		
 	} //fim do switch escolha
   
 
@@ -955,10 +961,11 @@ if(pay==4){
 
 
 
-return 0;
+
 
 }
-
+return 0;
+}
 
 /*Footer
 © 2022 GitHub, Inc.
