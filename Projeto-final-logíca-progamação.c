@@ -78,10 +78,12 @@ int main(void) {
 	printf("\t\t\t\t\t\t\tDigite O Código enviado por sms para seu Número: ");
 	scanf("%d", &tel);
 	printf("\n");
-	printf("\t\t\t\t\t\t\tConta criada com sucesso!");
+	printf("\t\t\t\t\t\t\tConta criada com sucesso!\n\n");
+	printf("Carregando....");
 	sleep(3);
 	system(limpa_tela);
-}
+}//fim do if de cadastramento
+
  //iniciando seleção de categoria
  
  printf("Olá %s, bem vindo a Lanchonete kisabor, selecione uma categoria: \n\n", nome);
@@ -280,9 +282,10 @@ if(op2==7){
  }
  system(limpa_tela);
  printf("Detalhes: %.f %s, Subtotal até agora: %.2f\n", num2,op2,c2);
-}
+}// fim do caso o usuario escolha 1.
 	
 	
+	 
 	printf("Deseja escolher uma bebida?\n\n");
 	printf("1. Sim\n\n");
 	printf("2. Não\n\n");
@@ -385,7 +388,7 @@ scanf("%s", end);
 
 system(limpa_tela);
 
-printf("%s", end);
+printf("Endereço de entrega: %s", end);
 printf("\n");
 
 printf("forma de pagamento: \n\n");
@@ -632,6 +635,99 @@ if(op2==7){
        scanf("%f", &num3);
        c3=sdcaja*num3;
      }
+     switch(p){ //caso a pessoa não queira salgado
+  
+case 2:
+	calculo=c1+c3;
+	
+	system(limpa_tela);
+	
+	
+	printf("Detalhes Do Pedido: \n\n");
+
+printf("Nome do cliente: %s \n\n", nome);
+
+printf("%.f %s", num,op);
+printf("\n\n");
+
+printf("%.f %s ", num3,op3);
+printf("\n\n");
+
+printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
+
+printf("Digite o Endereço de Entrega: ");
+scanf("%s", end);
+
+system(limpa_tela);
+printf("Endereço de entrega: %s", end);
+printf("\n");
+
+printf("forma de pagamento: \n\n");
+
+printf("1. Débito \n\n");
+printf("2. crédito \n\n");
+printf("3. Pix \n\n");
+printf("4. dinheiro \n\n");
+printf("Escolha Uma Opção: ");
+scanf("%d", &pay);
+
+if(pay==1){
+    printf("cartão de Débito. \n\n");
+    
+     printf("Digite o Número do cartão: ");
+     scanf("%d", &num);
+    
+    printf("Digite a data de validade do cartão: 30/04/2025 \n");
+    
+    
+    printf("Digite o codígo cvc: ");
+    scanf("%d", &op);
+    printf("pagamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
+}
+if(pay==2){
+    printf("cartão de credito. \n\n");
+    
+     printf("Digite o Numero do cartão: ");
+    scanf("%d", &num);
+    
+    printf("Digite a data de validade do cartão: 30/04/2025 ");
+    
+    
+    printf("Digite o codígo cvc: ");
+    scanf("%d", &op);
+    printf("pagamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
+}
+if(pay==3){
+    printf("Área pix. \n\n");
+    
+    printf("CNPJ:9090666171 \n");
+    printf("Envie o comprovante para nosso whatsapp: 71985226776. \n"); 
+}
+if(pay==4){
+    printf("dinheiro \n");
+    
+    printf("Pronto,avisamos ao motoboy que será em dinheiro.");
+    
+    printf("Precisa de troco?: \n");
+   printf("1. Sim \n");
+   printf("2. Não \n");
+   scanf("%d", &p);
+   
+   if(p==1){
+   	printf("Qual é o Valor a ser trocado?: ");
+   	scanf("%d", &p);
+   	printf("Pedido confirmado com sucesso, obrigado pela prêferencia!");
+   }
+   else if(op==2){
+   	
+   	printf("Ok \n");
+   	printf("Pedido confirmado com sucesso, obrigado pela prêferencia!");
+   }
+}
+
+break;
+
+}
 
  }
      	 //caso o usuario queira as três opções
@@ -721,98 +817,6 @@ if(pay==4){
    else if(op==2){
    	
    	printf("Ok \n");
-   }
-}
-break;
-}
-
-switch(p){ //caso a pessoa não queira salgado
-  
-case 2:
-	calculo=c1+c3;
-	
-	system(limpa_tela);
-	
-	
-	printf("Detalhes Do Pedido: \n\n");
-
-printf("Nome do cliente: %s \n\n", nome);
-
-printf("%.f %s", num,op);
-printf("\n\n");
-
-printf("%.f %s ", num3,op3);
-printf("\n\n");
-
-printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
-
-printf("Digite o Endereço de Entrega: ");
-scanf("%s", end);
-
-system(limpa_tela);
-printf("Endereço de entrega: %s", end);
-printf("\n");
-
-printf("forma de pagamento: \n\n");
-
-printf("1. Débito \n\n");
-printf("2. crédito \n\n");
-printf("3. Pix \n\n");
-printf("4. dinheiro \n\n");
-printf("Escolha Uma Opção: ");
-scanf("%d", &pay);
-
-if(pay==1){
-    printf("cartão de Débito. \n\n");
-    
-     printf("Digite o Número do cartão: ");
-     scanf("%d", &num);
-    
-    printf("Digite a data de validade do cartão: 30/04/2025 \n");
-    
-    
-    printf("Digite o codígo cvc: ");
-    scanf("%d", &op);
-    printf("pagamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
-}
-if(pay==2){
-    printf("cartão de credito. \n\n");
-    
-     printf("Digite o Numero do cartão: ");
-    scanf("%d", &num);
-    
-    printf("Digite a data de validade do cartão: 30/04/2025 ");
-    
-    
-    printf("Digite o codígo cvc: ");
-    scanf("%d", &op);
-    printf("pagamento em ánalise! assim que o pagamento for confirmado mandaremos um comprovante de pagamento no seu whatsapp.");
-}
-if(pay==3){
-    printf("Área pix. \n\n");
-    
-    printf("CNPJ:9090666171 \n");
-    printf("Envie o comprovante para nosso whatsapp: 71985226776. \n"); 
-}
-if(pay==4){
-    printf("dinheiro \n");
-    
-    printf("Pronto,avisamos ao motoboy que será em dinheiro.");
-    
-    printf("Precisa de troco?: \n");
-   printf("1. Sim \n");
-   printf("2. Não \n");
-   scanf("%d", &p);
-   
-   if(p==1){
-   	printf("Qual é o Valor a ser trocado?: ");
-   	scanf("%s", p);
-   	printf("Pedido confirmado com sucesso, obrigado pela prêferencia!");
-   }
-   else if(op==2){
-   	
-   	printf("Ok \n");
-   	printf("Pedido confirmado com sucesso, obrigado pela prêferencia!");
    }
 }
 break;
