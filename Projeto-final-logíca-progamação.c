@@ -10,12 +10,12 @@ int main(void) {
 	setlocale(LC_ALL, "Portuguese");
 	system(cor_programa);
 	 //variaveis//
-    
    char nome[50];
    char end[50]; 
    char email[50];
+   char senha[50];
    float pq,po,ha,ch,re,ce,scm,ag,xbu,xegg,xtudo,sdl,sdab,sdcaja,bauro,pastelfo,pastelca,esfirra,hamburguerfor,enrola,pastelfra; 
-   int op,op2,op3,escolha,senha,tel,perg,pay,p,eschamburguer,opbebidas;
+   int op,op2,op3,escolha,tel,perg,pay,p,eschamburguer,opbebidas;
    pq=2.50;
    po=3.00;
    ha=4.50;
@@ -40,7 +40,6 @@ int main(void) {
    float num,num2,num3,calculo,c1,c2,c3;  //variaveis para o calculo e para a quantidade de unidades
    
    //codígo//
-   
    printf("\t\t\t\t\t==========Lanchonete kisabor========== \n\n\n");
    
    printf("Já tem conta na kisabor? \n");
@@ -55,7 +54,10 @@ int main(void) {
    scanf("%s", nome);
    printf("\n");
    printf("\t\t\t\t\t\t\tSenha: ");
-   scanf("%d", &senha);
+   scanf("%s", senha);
+   printf("\n");
+   printf("\t\t\t\t\t\t\tCarregando....");
+	sleep(3);
    system(limpa_tela);
 }
 
@@ -69,7 +71,7 @@ int main(void) {
 	scanf("%s", email);
 	printf("\n");
 	printf("\t\t\t\t\t\t\tCrie uma Senha: ");
-	scanf("%d", &senha);
+	scanf("%s", senha);
 	printf("\n");
 	printf("\t\t\t\t\t\t\tDigite Seu Numéro de Telefone: ");
 	scanf("%d", &tel);
@@ -88,7 +90,7 @@ int main(void) {
  
  printf("Olá %s, bem vindo a Lanchonete kisabor, selecione uma categoria: \n\n", nome);
    
-   printf("1. Pedir estilo fast-foods \n");
+   printf("1. Pedir Lanche \n");
    
    printf("2. Nossas Lojas \n");
    
@@ -112,7 +114,45 @@ printf("\n");
 printf("Carregando.....");
 sleep(3);
 system(limpa_tela); //limpando a tela
-
+break;
+	case 2: //refere-se ao switch(escolha)
+		
+	 printf("temos Lojas Espalhadas por toda Salvador: \n\n");
+	 
+	 printf("Localizações\n\n");
+	 
+	 printf(". Rua Mario Barros 32\n");
+	 printf(". Rua da Arueira Vermelha 20\n");
+	 printf(". Avenida Dendezeiros 124\n\n");
+   break;
+   
+   case 3:
+   	
+   	printf("Siga nossas redes sociais\n\n");
+   	
+   	printf("@Diegosgz_\n\n");
+   	printf("@theuslima_01\n\n");
+   	printf("@_dsantos9\n\n");
+   	printf("@Damassa666\n\n");
+   	
+   	break;
+   	
+   	case 4:
+   		printf("Nossa Política de privacidade\n\n");
+   		
+   	printf("A política de privacidade (ou declaração de política de privacidade) é o documento por meio do qual a pessoa física\n");
+	printf("ou jurídica que mantém um site ou aplicativo expõe e explica a todos os interessados a forma como os dados\n");   	
+	printf("pessoais dos usuários da plataforma serão tratados.");
+	printf("O assunto é regulamentado, no Brasil, principalmente pela Lei Geral de Proteção de Dados Pessoais (LGPD)\n");
+	printf(" lei que estabeleceu uma série de exigências àqueles que realizam operações de tratamento de dados pessoais. A lei se\n");
+	printf("aplica quando: \n\n");
+	
+	printf("se a operação de tratamento é realizada no território nacional;");
+	printf("se a atividade de tratamento tem por objetivo a oferta de produtos ou serviços ou o tratamento de dados de indivíduos localizados no território nacional;");
+	printf("se os dados pessoais são coletados no território nacional.");
+	
+	break;
+}
 switch(eschamburguer){ 
 
  //caso a pessoa escolha sim
@@ -138,7 +178,7 @@ switch(eschamburguer){
     printf("\n");
    printf("Escolha uma opção: "); //escolher um Hamburguer
    scanf("%d", &op);
-  
+  printf("\n");
    
     if(op==1){
    	    op = ("pão de queijo");
@@ -190,7 +230,7 @@ switch(eschamburguer){
 	printf("Detalhes: %.f %s, Subtotal: %.2f \n\n", num,op,c1);
 	break;
 	
-	case 2:   //caso o usuario escolha não
+	case 2:   //caso o usuario Não queira Hamburguer
 		
 		printf("Deseja escolher Um Salgado?:\n "); 
 	printf("1. Sim\n\n");
@@ -282,7 +322,7 @@ if(op2==7){
  }
  system(limpa_tela);
  printf("Detalhes: %.f %s, Subtotal até agora: %.2f\n", num2,op2,c2);
-}// fim do caso o usuario escolha 1.
+}// fim do caso o usuario escolha que quer salgado
 	
 	
 	 
@@ -322,39 +362,39 @@ if(op2==7){
    
      if(op3==1){
    	   op3 = ("Refrigerantes"); 
-       printf("\t Qual é a quantidade?: ");
+       printf("Qual é a quantidade?: ");
        scanf("%f", &num3);
        c3=re*num3;
      }
      if(op3==2){
    	   op3 = ("Cervejas"); 
-       printf("\t Qual é a quantidade?: ");
+       printf("Qual é a quantidade?: ");
        scanf("%f", &num3);
        c3=ce*num3;
      }                                           //condicional das bebidas
      if(op3==3){
    	   op3 = ("Sucos de maracúja");
-       printf("\t Qual é a quantidade?: ");
+       printf("Qual é a quantidade?: ");
        scanf("%f", &num3);
        c3=scm*num3;
      }
      if(op3==4){
    	   op3 = ("Águas com gás");
-       printf("\t Qual é a quantidade?: ");
+       printf("Qual é a quantidade?: ");
        scanf("%f", &num3);
        c3=ag*num3;
      }
    
      if(op3==5){
    	   op3 = ("Sucos de Abacaxi");
-       printf("\t Qual é a quantidade?: ");
+       printf("Qual é a quantidade?: ");
        scanf("%f", &num3);
        c3=sdab*num3;
      }
    
      if(op3==6){
    	   op3 = ("Sucos de Limão");
-       printf("\t Qual é a quantidade?: ");
+       printf("Qual é a quantidade?: ");
        scanf("%f", &num3);
        c3=sdl*num3;
      }
@@ -369,16 +409,16 @@ if(op2==7){
       
      system(limpa_tela);	
 		
-	calculo=c2+c3;
+	calculo=c2+c3; //calculo do usuario que não quis bebida
 		
 printf("Detalhes Do Pedido: \n\n");
 
 printf("Nome do cliente: %s \n\n", nome);
 
-printf("%.f %s", num2,op2);
+printf("%.f %s R$%.2f", num2,op2,c2);
 printf("\n\n");
 
-printf("%.f %s ", num3,op3);
+printf("%.f %s R$%.2f ", num3,op3,c3);
 printf("\n\n");
 
 printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
@@ -458,7 +498,7 @@ if(pay==4){
 } //fim do switch caso a pessoa não queira hamburguer
 
 
-//caso o usuario  esolha sim, após ele pedir o hamburguer, ele ira pra essa opção:
+//caso o usuario  queira hamburguer,ele ira pra essa opção:
 
 switch(eschamburguer){
 	case 1:
@@ -551,7 +591,9 @@ if(op2==7){
  	c2=c2+c1;
  }
  system(limpa_tela);
- printf("Detalhes: %.f %s, Subtotal até agora: %.2f\n", num2,op2,c2);
+ printf("Detalhes: %.f %s", num2,op2);
+ printf("\n");
+ printf("%.f %s, subtotal: %.2f\n", num,op,c2);
  
 }
 	//após o usuario terminar a escolha de salgado, ele ira pra essa opção:
@@ -647,10 +689,10 @@ case 2:
 
 printf("Nome do cliente: %s \n\n", nome);
 
-printf("%.f %s", num,op);
+printf("%.f %s: R$%.2f", num,op,c1);
 printf("\n\n");
 
-printf("%.f %s ", num3,op3);
+printf("%.f %s: R$%.2f", num3,op3,c3);
 printf("\n\n");
 
 printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
@@ -741,13 +783,13 @@ calculo=c1+c2+c3; //calculo do total do pedido
 
 printf("Nome do cliente: %s \n\n", nome);
 
-printf("%.f %s", num,op);
+printf("%.f %s: R$%.2f", num,op,c1);
 printf("\n\n");
 
-printf("%.f %s ", num2,op2);
+printf("%.f %s: R$%.2f", num2,op2,c2);
 printf("\n\n");
 
-printf("%.f %s ", num3,op3);
+printf("%.f %s: R$%.2f", num3,op3,c3);
 printf("\n\n");
 
 printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
@@ -832,10 +874,10 @@ printf("Detalhes Do Pedido: \n\n");
 
 printf("Nome do cliente: %s \n\n", nome);
 
-printf("%.f %s", num,op);
+printf("%.f %s: R$%.2f", num,op,c1);
 printf("\n\n");
 
-printf("%.f %s ", num2,op2);
+printf("%.f %s: R$%.2f", num2,op2,c2);
 printf("\n\n");
 
 printf(" O total do pedido ficou: R$ %.2f \n\n", calculo);
@@ -915,57 +957,6 @@ if(pay==4){
 	 
 	
 }
-}switch(escolha){
-	case 2: //refere-se ao switch(escolha)
-		
-	 printf("temos Lojas Espalhadas por toda Salvador: \n\n");
-	 
-	 printf("Localizações\n\n");
-	 
-	 printf(". Rua Mario Barros 32\n");
-	 printf(". Rua da Arueira Vermelha 20\n");
-	 printf(". Avenida Dendezeiros 124\n");
-	 
-   break;
-   
-   case 3:
-   	
-   	printf("Siga nossas redes sociais\n\n");
-   	
-   	printf("@Diegosgz_\n\n");
-   	printf("@theuslima_01\n\n");
-   	printf("@_dsantos9\n\n");
-   	printf("@Damassa666\n\n");
-   	
-   	break;
-   	
-   	case 4:
-   		printf("Nossa Política de privacidade\n\n");
-   		
-   	printf("A política de privacidade (ou declaração de política de privacidade) é o documento por meio do qual a pessoa física\n");
-	printf("ou jurídica que mantém um site ou aplicativo expõe e explica a todos os interessados a forma como os dados\n");   	
-	printf("pessoais dos usuários da plataforma serão tratados.");
-	printf("O assunto é regulamentado, no Brasil, principalmente pela Lei Geral de Proteção de Dados Pessoais (LGPD)\n");
-	printf(" lei que estabeleceu uma série de exigências àqueles que realizam operações de tratamento de dados pessoais. A lei se\n");
-	printf("aplica quando: \n\n");
-	
-	printf("se a operação de tratamento é realizada no território nacional;");
-	printf("se a atividade de tratamento tem por objetivo a oferta de produtos ou serviços ou o tratamento de dados de indivíduos localizados no território nacional;");
-	printf("se os dados pessoais são coletados no território nacional.");
-	
-	break;
-		
-	} //fim do switch escolha
-  
-
-
-
-
-
-
-
-
-
 
 }
 return 0;
